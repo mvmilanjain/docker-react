@@ -1,5 +1,4 @@
 sudo: required
-language: generic
 
 service:
   - docker
@@ -9,6 +8,8 @@ before_install:
 
 script: 
   - docker run -e CI=true milanjain2189/docker-react npm run test -- --coverage
+
+language: generic
 
 deploy:
   provider: elasticbeanstalk
